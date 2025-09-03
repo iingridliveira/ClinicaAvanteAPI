@@ -1,9 +1,16 @@
 import { PacienteRoute } from "./paciente.routes.js";
 import { MedicoRoute } from "./medicos.routes.js";
-import e from "express";
+import { Router } from "express";
+import { criarPaciente } from "../controllers/pacienteController.js";
 
-const Rotas = e.Router()
+const Rotas = Router();
 
-Rotas.use('/medico', MedicoRoute, '/paciente', PacienteRoute
-)
-export{Rotas}
+Rotas.use('/medico', MedicoRoute);
+Rotas.use('/paciente', PacienteRoute);
+
+Rotas.post("/pacientes", criarPaciente);
+
+
+export { Rotas };
+
+
