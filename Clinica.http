@@ -1,0 +1,119 @@
+@baseUrl = https://congenial-space-goldfish-rjw9p5gggq9fwpp6-4000.app.github.dev
+
+
+### Medico
+
+# @name createMedico
+POST {{baseUrl}}/medicos/crirmedico
+Content-Type: application/json
+
+{
+  "nome": "Dr. João Silva",
+  "especialidade": "CARDIOLOGIA"
+}
+
+###
+
+# @name getAllMedicos
+GET {{baseUrl}}/medicos/medicotodos
+
+###
+
+# @name getMedicoById
+GET {{baseUrl}}/medicos/b8a18fe4-4989-4294-a8aa-18a45c25b0aa
+
+###
+
+# @name updateMedico
+PUT {{baseUrl}}/medicos/b8a18fe4-4989-4294-a8aa-18a45c25b0aa
+Content-Type: application/json
+
+{
+  "nome": "Dr. João Silva Neto",
+  "especialidade": "CARDIOLOGIA"
+}
+
+###
+
+# @name deleteMedico
+DELETE {{baseUrl}}/medicos/851bcdfb-0de7-40ed-96e1-1db94929c4f0
+
+### Paciente
+
+# @name createPaciente
+POST {{baseUrl}}/pacientes
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza",
+  "email": "maria.souza@example.com",
+  "dataNascimento": "1990-05-15"
+}
+
+###
+
+# @name getAllPacientes
+GET {{baseUrl}}/pacientes
+
+###
+
+# @name getPacienteById
+GET {{baseUrl}}/pacientes/pacienteId
+
+###
+
+# @name updatePaciente
+PUT {{baseUrl}}/pacientes/pacienteId
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza Lima",
+  "email": "maria.souza.lima@example.com",
+  "dataNascimento": "1990-05-15"
+}
+
+###
+
+# @name deletePaciente
+DELETE {{baseUrl}}/pacientes/pacienteId
+
+### Consulta
+
+# @name createConsulta
+POST {{baseUrl}}/consultas
+Content-Type: application/json
+
+{
+  "data": "2025-09-05T10:00:00Z",
+  "descricao": "Consulta de rotina",
+  "medicoId": "medicoId",
+  "pacienteId": "pacienteI"
+}
+
+###
+
+# @name getAllConsultas
+GET {{baseUrl}}/consultas
+
+###
+
+# @name getConsultaById
+GET {{baseUrl}}/consultas/consultaId
+
+###
+
+# @name updateConsulta
+PUT {{baseUrl}}/consultas/consultaId
+Content-Type: application/json
+
+{
+  "data": "2025-09-05T11:00:00Z",
+  "descricao": "Retorno de consulta",
+  "medicoId": "medicoId",
+  "pacienteId": "pacienteId"
+}
+
+###
+
+# @name deleteConsulta
+DELETE {{baseUrl}}/consultas/consultaId

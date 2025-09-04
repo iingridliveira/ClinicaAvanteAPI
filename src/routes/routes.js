@@ -4,6 +4,6 @@ import e from "express";
 
 const Rotas = e.Router()
 
-Rotas.use('/medico', MedicoRoute, '/paciente', PacienteRoute
-)
+Rotas.use('/medicos', MedicoRoute)
+
 export{Rotas}
