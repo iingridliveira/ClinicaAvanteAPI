@@ -1,15 +1,17 @@
 import e from "express";
- 
-import { pacienteController } from "../controllers/pacienteController.js";
+
+
+import { pacienteController } from "../controllers/paciente.controller.js";
+const instacieCntrolerpaciente = new pacienteController
 
 const PacienteRoute = e.Router()
 
 
-PacienteRoute.post ('/pacientes', pacienteController.criarPaciente);
-PacienteRoute.get ('/pacientes', pacienteController.listarPacientes);
-PacienteRoute.get('/pacientes/:id', pacienteController.buscarPaciente);
-PacienteRoute.get('/pacientes/:id/proximas', pacienteController.proximasConsultas);
-PacienteRoute.put('/pacientes/:id', pacienteController.atualizarPaciente);
-PacienteRoute.delete('/pacientes/:id', pacienteController.deletarPaciente);
+PacienteRoute.post('/pacientes', instacieCntrolerpaciente.criarPaciente);
+PacienteRoute.get('/pacientes', instacieCntrolerpaciente.listarPacientes);
+PacienteRoute.get('/pacientes/:id', instacieCntrolerpaciente.buscarPaciente);
+PacienteRoute.get('/pacientes/:id/proximas', instacieCntrolerpaciente.proximasConsultas);
+PacienteRoute.put('/pacientes/:id', instacieCntrolerpaciente.atualizarPaciente);
+PacienteRoute.delete('/pacientes/:id', instacieCntrolerpaciente.deletarPaciente);
 
-export{PacienteRoute}
+export { PacienteRoute }
