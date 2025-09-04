@@ -78,7 +78,7 @@ const updateMedicos = async (req, res) => {
   try {
       const medico = await prisma.medico.update({
       where: {
-        id: String(id), // ou String(id) se no schema for String
+        id: String(id), 
       },
       data: {
         nome,

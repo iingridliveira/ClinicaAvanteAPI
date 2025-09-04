@@ -11,8 +11,8 @@ Content-Type: application/json
 {
   "data": "2025-09-05T10:00:00Z",
   "descricao": "Consulta de rotina",
-  "medicoId": "medicoId",
-  "pacienteId": "pacienteI"
+  "medicoId": "840b4ba8-e82b-4d5a-a646-16c7c00c856a",
+  "pacienteId": "3f4b40b4-2d76-4456-8bbf-575e5a51ebc7"
 }
 
 
@@ -24,22 +24,21 @@ GET {{baseUrl}}/consultas
 ###
 
 # @name getConsultaById
-GET {{baseUrl}}/consultas/consultaId
+GET {{baseUrl}}/consultas/c830bd72-59b5-4bae-89f0-16444fb40951
 
 ###
 
 # @name updateConsulta
-PUT {{baseUrl}}/consultas/consultaId
+PUT {{baseUrl}}/consultas/c830bd72-59b5-4bae-89f0-16444fb40951
 Content-Type: application/json
 
 {
   "data": "2025-09-05T11:00:00Z",
   "descricao": "Retorno de consulta",
-  "medicoId": "medicoId",
-  "pacienteId": "pacienteId"
+  "medicoId": "840b4ba8-e82b-4d5a-a646-16c7c00c856a",
+  "pacienteId": "3f4b40b4-2d76-4456-8bbf-575e5a51ebc7"
 }
-
 ###
 
 # @name deleteConsulta
-DELETE {{baseUrl}}/consultas/consultaId
+DELETE {{baseUrl}}/consultas/c830bd72-59b5-4bae-89f0-16444fb40951
