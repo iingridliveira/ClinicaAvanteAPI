@@ -5,11 +5,8 @@ import { Router } from "express";
 
 const Rotas = Router();
 
-Rotas.use('/medico', MedicoRoute);
 Rotas.use('/paciente', PacienteRoute);
+Rotas.use('/medicos', MedicoRoute)
 
-
-
-export { Rotas };
-
+export{Rotas}
 
