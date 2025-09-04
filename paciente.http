@@ -18,6 +18,11 @@ Content-Type: application/json
 # @name getAllPacientes
 GET {{baseUrl}}/paciente/pacientes
 
+### Buscar próximas consultas de um paciente
+GET {{baseUrl}}/paciente/pacientes/3f4b40b4-2d76-4456-8bbf-575e5a51ebc7/proximas
+Content-Type: application/json
+
+
 ###
 
 # @name getPacienteById

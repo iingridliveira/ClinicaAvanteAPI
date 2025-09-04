@@ -25,14 +25,29 @@ class pacienteController {
     try {
       const pacientes = await prisma.paciente.findMany({
         include: {
-          consultas: true
-        }
+          consultas: {
+            select: {
+              descricao: true,
+              data: true,
+              medico: {
+                select: {
+                  nome: true,
+                  especialidade: true
+
+                },
+              },
+            },
+          },
+        },
       });
-      res.json(pacientes);
+
+      res.status(200).json(pacientes);
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      console.error(error);
+      res.status(500).json({ error: 'Erro ao listar pacientes' });
     }
   }
+
 
   async buscarPaciente(req, res) {
     try {
@@ -42,7 +57,11 @@ class pacienteController {
         include: {
           consultas: {
             include: {
-              medico: true
+              medico: {
+                select: {
+                  nome: true,
+                },
+              },
             }
           }
         }
@@ -91,7 +110,7 @@ class pacienteController {
       const { id } = req.params;
 
       await prisma.paciente.delete({
-        where: { id:String(id) }
+        where: { id: String(id) }
       });
 
       res.status(200).json({ message: "Deu certo apagar" });

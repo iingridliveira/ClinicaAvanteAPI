@@ -15,6 +15,8 @@ Content-Type: application/json
   "pacienteId": "3f4b40b4-2d76-4456-8bbf-575e5a51ebc7"
 }
 
+### Buscar disponibilidades do médico
+GET  {{baseUrl}}/consultas/disponibilidades/840b4ba8-e82b-4d5a-a646-16c7c00c856a?dia=2025-09-10&slot=15
 
 ###
 
@@ -24,8 +26,7 @@ GET {{baseUrl}}/consultas
 ###
 
 # @name getConsultaById
-GET {{baseUrl}}/consultas/c830bd72-59b5-4bae-89f0-16444fb40951
-
+GET {{baseUrl}}/consultas/a699266f-2856-40dd-816b-373019ca2520
 ###
 
 # @name updateConsulta
