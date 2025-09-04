@@ -1,0 +1,41 @@
+@baseUrl = https://congenial-space-goldfish-rjw9p5gggq9fwpp6-4000.app.github.dev
+
+
+### Medico
+
+# @name createMedico
+POST {{baseUrl}}/medicos/crirmedico
+Content-Type: application/json
+
+{
+  "nome": "Dr. João Silva",
+  "especialidade": "CARDIOLOGIA"
+}
+
+###
+
+# @name getAllMedicos
+GET {{baseUrl}}/medicos/medicotodos
+
+###
+
+# @name getMedicoById
+GET {{baseUrl}}/medicos/b8a18fe4-4989-4294-a8aa-18a45c25b0aa
+
+
+###
+
+# @name updateMedico
+PUT {{baseUrl}}/medicos/b8a18fe4-4989-4294-a8aa-18a45c25b0aa
+Content-Type: application/json
+
+{
+  "nome": "Dr. João Silva Neto",
+  "especialidade": "CARDIOLOGIA"
+}
+
+###
+
+# @name deleteMedico
+DELETE {{baseUrl}}/medicos/851bcdfb-0de7-40ed-96e1-1db94929c4f0
+

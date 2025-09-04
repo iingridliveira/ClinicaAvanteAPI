@@ -1,0 +1,45 @@
+
+
+@baseUrl = https://congenial-space-goldfish-rjw9p5gggq9fwpp6-4000.app.github.dev
+
+### Consulta
+
+# @name createConsulta
+POST {{baseUrl}}/consultas
+Content-Type: application/json
+
+{
+  "data": "2025-09-05T10:00:00Z",
+  "descricao": "Consulta de rotina",
+  "medicoId": "medicoId",
+  "pacienteId": "pacienteI"
+}
+
+
+###
+
+# @name getAllConsultas
+GET {{baseUrl}}/consultas
+
+###
+
+# @name getConsultaById
+GET {{baseUrl}}/consultas/consultaId
+
+###
+
+# @name updateConsulta
+PUT {{baseUrl}}/consultas/consultaId
+Content-Type: application/json
+
+{
+  "data": "2025-09-05T11:00:00Z",
+  "descricao": "Retorno de consulta",
+  "medicoId": "medicoId",
+  "pacienteId": "pacienteId"
+}
+
+###
+
+# @name deleteConsulta
+DELETE {{baseUrl}}/consultas/consultaId

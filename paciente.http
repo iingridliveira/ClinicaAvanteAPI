@@ -1,0 +1,43 @@
+@baseUrl = https://congenial-space-goldfish-rjw9p5gggq9fwpp6-4000.app.github.dev
+
+
+### Medico
+
+### Paciente
+
+# @name createPaciente
+POST {{baseUrl}}/pacientes
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza",
+  "email": "maria.souza@example.com",
+  "dataNascimento": "1990-05-15"
+}
+
+###
+
+# @name getAllPacientes
+GET {{baseUrl}}/pacientes
+
+###
+
+# @name getPacienteById
+GET {{baseUrl}}/pacientes/pacienteId
+
+###
+
+# @name updatePaciente
+PUT {{baseUrl}}/pacientes/pacienteId
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza Lima",
+  "email": "maria.souza.lima@example.com",
+  "dataNascimento": "1990-05-15"
+}
+
+###
+
+# @name deletePaciente
+DELETE {{baseUrl}}/pacientes/pacienteId
